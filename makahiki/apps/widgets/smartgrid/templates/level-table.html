@@ -1,0 +1,226 @@
+<table class="activities-grid">
+          <tr><!-- Start header -->
+                {% for cat in categories %}
+                    <td>
+                        <div class="activity-category">
+                            <h5> {{ cat.name }}</h5>
+                        </div>
+                    </td>
+                {% endfor %}
+            </tr>
+            <!-- End header -->
+            <tr>
+                {% for cat in categories %}
+                    <td>
+                        <table>
+                            {% for task in cat.task_list %}
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <div class="{{task.type}}">
+                                                {% if task.availablity == -1 %}
+                                                {# --- before pub date --- #} 
+                                                    <br/>
+                                                    <a class="whatever"
+                                                       href="javascript:void(0);">
+                                                        <img src="{{ STATIC_URL}}images/lock24.png"
+                                                             width="22" align="top"
+                                                             title="Click to see how to unlock"
+                                                             onclick="unlock_dialog(event, '{{task.type}}','{{task.slug}}',
+                                                                 {% if task.unlock_condition_text %}
+                                                                     '{{task.unlock_condition_text|escapejs}}'
+                                                                 {% else %}
+                                                                     '{{task.unlock_condition|escapejs}}'
+                                                                 {% endif %}
+                                                              )">
+                                                    </a>
+                                                {% elif task.availablity == 0 %}
+                                                {# --- between pub date and expire date --- #}
+                                                    {% if task.is_unlock %}
+                                                        <a href="{% url activity_task task.type task.slug %}"
+                                                           title="{{task.name}}" onClick="setLevel({{level.priority}})">
+                                                            {% if task.type != 'commitment' %}
+                                                                {% if task.completed %}
+                                                                    {% if task.member.approval_status == "rejected" %}
+                                                                        <img src="{{ STATIC_URL}}images/icons/icon-exclamation2.png"
+                                                                             width="12"
+                                                                             align="left"/>
+                                                                     {% else %}
+                                                                        {% if task.member.approval_status == "pending" %}
+                                                                            {% if task.event.is_event_completed %}
+                                                                                <img src="{{ STATIC_URL}}images/icons/icon-exclamation2.png"
+                                                                                     width="12"
+                                                                                    align="left"/>
+                                                                            {% else %}
+                                                                                <img src="{{ STATIC_URL}}images/icons/icon-submit.png"
+                                                                                     width="12"
+                                                                                    align="left"/>
+                                                                            {% endif %}
+                                                                         {% else %}
+                                                                             <img src="{{ STATIC_URL}}images/icons/icon-done.png"
+                                                                                  width="12"
+                                                                                  align="left"/>
+                                                                        {% endif %}
+                                                                    {% endif %}
+                                                                    <br/>
+                                                                    <B>{{ task.name }}</B>
+                                                                {% else %}
+                                                                    <br/>
+                                                                    {% if task.point_value %}
+                                                                        <h3>{{ task.point_value }}</h3>
+                                                                    {% else %}
+                                                                        <h3>{{ task.activity.point_range_end }}</h3>
+                                                                    {% endif %}
+                                                                {% endif %}
+                                                            {% else %}
+                                                                {# ------ is commitment #}
+                                                                {% if task.completed %}
+                                                                    {% if task.member.days_left != 0 %}
+                                                                        <img src="{{ STATIC_URL}}images/icons/icon-submit.png"
+                                                                             width="12"
+                                                                             align="left"/>                                                                
+                                                                    {% elif task.member.award_date %}
+                                                                        <img src="{{ STATIC_URL}}images/icons/icon-done.png"
+                                                                             width="12"
+                                                                             align="left">
+                                                                    {% else %}
+                                                                        <img src="{{ STATIC_URL}}images/icons/icon-exclamation2.png"
+                                                                             width="12"
+                                                                             align="left"/>
+                                                                    {% endif %}
+                                                                    <br/>
+                                                                    <B>{{ task.name }}</B>
+                                                                {% else %}
+                                                                    <br/>
+                                                                    <h3>{{ task.point_value }}</h3>
+                                                                {% endif %} {# end task.completed #}
+                                                            {% endif %}
+                                                            {# ------- end task.type #}
+                                                        </a>
+                                                    {% elif task.type == 'filler' %}
+                                                        <br/>
+                                                        <a href="javascript:void(0);"
+                                                           onclick="showFillerModal(event); return false;">
+                                                            <h3>X</h3>
+                                                        </a>
+                                                    {% else %}        {# ------ is lock #}
+                                                        <br/>
+                                                        <a class="whatever"
+                                                           href="javascript:void(0);">
+                                                            <img src="{{ STATIC_URL}}images/lock24.png"
+                                                                 width="22" align="top"
+                                                                 title="Click to see how to unlock"
+                                                                 onclick="unlock_dialog(event, '{{task.type}}','{{task.slug}}',
+                                                                     {% if task.unlock_condition_text %}
+                                                                         '{{task.unlock_condition_text|escapejs}}'
+                                                                     {% else %}
+                                                                         '{{task.unlock_condition|escapejs}}'
+                                                                     {% endif %}
+                                                                     )">
+                                                        </a>
+                                                    {% endif %}
+                                                {% elif task.availablity == 1 %}
+                                                {# --- task has expired --- #}
+                                                    {% if task.completed %}
+                                                    <a href="{% url activity_task task.type task.slug %}"
+                                                           title="{{task.name}}" onClick="setLevel({{level.priority}})">
+                                                        {% if task.member.approval_status == "rejected" %}
+                                                            <img src="{{ STATIC_URL}}images/icons/icon-exclamation2.png"
+                                                                 width="12"
+                                                                 align="left"/>
+                                                        {% else %}
+                                                            {% if task.member.approval_status == "pending" %}
+                                                                {% if task.event.is_event_completed %}
+                                                                    <img src="{{ STATIC_URL}}images/icons/icon-exclamation2.png"
+                                                                         width="12"
+                                                                         align="left"/>
+                                                                {% else %}
+                                                                    <img src="{{ STATIC_URL}}images/icons/icon-submit.png"
+                                                                         width="12"
+                                                                         align="left"/>
+                                                                {% endif %}
+                                                            {% else %}
+                                                                <img src="{{ STATIC_URL}}images/icons/icon-done.png"
+                                                                     width="12"
+                                                                     align="left"/>
+                                                            {% endif %}
+                                                        {% endif %}
+                                                        <br/>
+                                                            <B>{{ task.name }}</B>
+                                                            </a>
+                                                    {% else %}
+                                                    <br/>
+                                                    <a href="{% url activity_task task.type task.slug %}"
+                                                           title="{{task.name}}" onClick="setLevel({{level.priority}})">
+                                                                <b>Expired</b>
+                                                        </a>  
+                                                    {% endif %}                                              
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </td>
+                {% endfor %}
+            </tr>
+        </table>
+
+        <p/>
+
+        <table class="activities-grid-legend">
+            <tr>
+                <td colspan="10"><b>Legend:</b></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="activity-legend"></div>
+                </td>
+                <td width=100>activity</td>
+                <td>
+                    <div class="commitment-legend"></div>
+                </td>
+                <td width=100>commitment</td>
+                <td>
+                    <div class="event-legend"></div>
+                </td>
+                <td width=100>event</td>
+                <td>
+                    <div class="excursion-legend"></div>
+                </td>
+                <td width=100>excursion</td>
+                <td>
+                    <div class="filler-legend"></div>
+                </td>
+                <td width=100>filler</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="{{ STATIC_URL}}images/icons/icon-submit.png"
+                         width="12"
+                         align="left"/>                
+                </td>
+                <td width=100>Submitted</td>
+                <td>
+                    <img src="{{ STATIC_URL}}images/icons/icon-done.png"
+                         width="12"
+                         align="left"/>                
+                </td>
+                <td width=100>Approved</td>                
+                <td>
+                    <img src="{{ STATIC_URL}}images/icons/icon-exclamation2.png"
+                         width="12"
+                         align="left"/>                
+                </td>
+                <td width=100>Rejected</td>                
+            </tr>
+        </table>
+
+
+<script type="text/javascript">
+    function setLevel(lvl) {
+//     	console.log("setting current-level cookie to " + lvl);
+        setCookie("current-level", lvl - 1);
+    }
+</script>
