@@ -104,5 +104,5 @@ def _get_default_view_objects(request):
 def _pass_through(request):
     """pass through for trivial requests."""
     path = request.path
-    pattern = "^/(log/|site_media/|favicon.ico)"
+    pattern = "^/(init/|log/|site_media/|favicon.ico)"
     return re.compile(pattern).match(path)

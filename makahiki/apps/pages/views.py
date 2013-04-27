@@ -12,6 +12,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from apps.managers.cache_mgr import cache_mgr
 from apps.managers.challenge_mgr import challenge_mgr
 from apps.widgets.resource_goal import resource_goal
+from apps.utils import script_utils
 
 
 @never_cache
@@ -23,6 +24,17 @@ def root_index(request):
         return HttpResponseRedirect(reverse("home_index"))
     return HttpResponseRedirect(reverse("landing", args=()))
 
+@never_cache
+def init(request):
+    """
+    handle top level pages.
+    """
+    manage_py = script_utils.manage_py_command()
+    manage_command = "python " + manage_py
+    fixture_path = "fixtures"
+
+    script_utils.syncdb(manage_command)
+    script_utils.load_data(manage_command, "default", fixture_path)
 
 @never_cache
 @login_required

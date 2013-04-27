@@ -21,7 +21,7 @@ class LoginMiddleware(object):
         path = request.path
 
         # pass through for trivial requests
-        pattern = "^/(log|site_media|favicon.ico)/"
+        pattern = "^/(init|log|site_media|favicon.ico)/"
         if re.compile(pattern).match(path):
             return None
 

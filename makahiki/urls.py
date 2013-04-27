@@ -13,6 +13,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Main page.
     url(r'^$', "apps.pages.views.root_index", name="root_index"),
+    url(r'^init/$', "apps.pages.views.init", name="init"),
 
     # page urls
     url(r'^home/$', "apps.pages.views.index", name="home_index"),

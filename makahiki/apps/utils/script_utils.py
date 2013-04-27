@@ -62,7 +62,9 @@ def push_to_heroku(heroku_app):
 def syncdb(manage_command):
     """sync db."""
     print "syncing and migrating db..."
-    os.system("%s syncdb --noinput --migrate --verbosity 0" % manage_command)
+    cmd = "%s syncdb --noinput --migrate --verbosity 0" % manage_command
+    print cmd
+    os.system(cmd)
 
 
 def reset_db(heroku_app):
