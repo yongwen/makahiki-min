@@ -122,6 +122,7 @@ def create_heroku_app(heroku_app):
 
 def load_fixtures(manage_command, fixture_path, prefix):
     """load fixture files."""
+    print fixture_path
     for name in os.listdir(fixture_path):
         if name.startswith(prefix) and name.endswith(".json"):
             fixture = os.path.join(fixture_path, name)
