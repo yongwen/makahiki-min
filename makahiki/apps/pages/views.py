@@ -20,6 +20,8 @@ def root_index(request):
     """
     handle the landing page.
     """
+    script_utils.init_db()
+
     if request.user.is_authenticated():
         return HttpResponseRedirect(reverse("home_index"))
     return HttpResponseRedirect(reverse("landing", args=()))
@@ -29,12 +31,9 @@ def init(request):
     """
     handle top level pages.
     """
-    manage_py = script_utils.manage_py_command()
-    manage_command = "python " + manage_py
-    fixture_path = "fixtures"
+    script_utils.init_db()
 
-    script_utils.syncdb(manage_command)
-    script_utils.load_data(manage_command, "default", fixture_path)
+    return HttpResponseRedirect(reverse("landing", args=()))
 
 @never_cache
 @login_required

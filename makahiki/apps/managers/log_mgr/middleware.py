@@ -10,7 +10,7 @@ import re
 from apps.managers.log_mgr import log_mgr
 
 MEDIA_REGEXP = r'^\/site_media'
-URL_FILTER = ("/favicon.ico", "/admin/jsi18n/")
+URL_FILTER = ("/init/", "/favicon.ico", "/admin/jsi18n/")
 
 
 class LoggingMiddleware(object):

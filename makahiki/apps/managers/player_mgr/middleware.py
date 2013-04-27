@@ -5,6 +5,7 @@ import datetime
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from apps.managers.challenge_mgr import challenge_mgr
+from apps.utils import script_utils
 
 
 class LoginMiddleware(object):
@@ -26,6 +27,7 @@ class LoginMiddleware(object):
             return None
 
         # load the db settings if not done yet.
+        script_utils.init_db()
         challenge_mgr.init()
 
         # pass through for trivial requests

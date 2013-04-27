@@ -7,6 +7,9 @@ from django.contrib import admin
 from django.views.generic.simple import direct_to_template
 from apps.admin.admin import sys_admin_site, challenge_designer_site, \
     challenge_manager_site, developer_site
+from apps.managers.challenge_mgr.models import ChallengeSetting
+from apps.utils import script_utils
+
 
 admin.autodiscover()
 

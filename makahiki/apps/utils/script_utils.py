@@ -3,6 +3,7 @@
 import os
 import sys
 import getopt
+from apps.managers.challenge_mgr.models import ChallengeSetting
 
 
 def exit_with_help(msg):
@@ -57,6 +58,20 @@ def push_to_heroku(heroku_app):
     """push to heroku."""
     print "push to heroku..."
     os.system("cd " + manage_py_dir() + "; git push %s master" % heroku_app)
+
+
+def init_db():
+    """syncdb and init data"""
+    try:
+        ChallengeSetting.objects.get(pk=1)
+    except:
+        manage_py = manage_py_command()
+
+        manage_command = "python " + manage_py
+        fixture_path = manage_py_dir() + "fixtures"
+
+        syncdb(manage_command)
+        load_data(manage_command, "default", fixture_path)
 
 
 def syncdb(manage_command):
