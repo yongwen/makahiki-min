@@ -31,7 +31,7 @@ def init(request):
     """
     handle top level pages.
     """
-    script_utils.init_db()
+    script_utils.init_db(force=True)
 
     return HttpResponseRedirect(reverse("landing", args=()))
 

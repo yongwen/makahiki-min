@@ -60,11 +60,15 @@ def push_to_heroku(heroku_app):
     os.system("cd " + manage_py_dir() + "; git push %s master" % heroku_app)
 
 
-def init_db():
+def init_db(force=False):
     """syncdb and init data"""
+
     try:
         ChallengeSetting.objects.get(pk=1)
     except:
+        force = True
+
+    if force:
         manage_py = manage_py_command()
 
         manage_command = "python " + manage_py
