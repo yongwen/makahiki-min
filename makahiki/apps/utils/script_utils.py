@@ -129,7 +129,7 @@ def load_fixtures(manage_command, fixture_path, prefix):
             if manage_command.startswith("heroku"):
                 fixture = os.path.join("makahiki", fixture)
             print "loading fixture %s..." % name
-            os.system("%s loaddata -v 0 %s" % (manage_command, fixture))
+            os.system("%s loaddata -v 0 %s &" % (manage_command, fixture))
 
 
 def load_data(manage_command, instance_type, fixture_path):
@@ -140,10 +140,10 @@ def load_data(manage_command, instance_type, fixture_path):
 
     if instance_type == "default":
         print "setting up default data..."
-        os.system("%s setup_test_data rounds 1" % manage_command)
+        os.system("%s setup_test_data rounds 1 &" % manage_command)
         load_fixtures(manage_command, fixture_path, "default_")
         # setup 2 user per team
-        os.system("%s setup_test_data all 2" % manage_command)
+        os.system("%s setup_test_data all 2 &" % manage_command)
     elif instance_type == "test":
         print "setting up test data..."
         os.system("%s setup_test_data rounds 3" % manage_command)
