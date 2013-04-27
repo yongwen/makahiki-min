@@ -73,7 +73,7 @@ def main(argv):
 
     script_utils.syncdb(manage_command)
 
-    script_utils.copy_static_media(heroku_app)
+    #script_utils.copy_static_media(heroku_app)
 
     script_utils.load_data(manage_command, instance_type, fixture_path)
 

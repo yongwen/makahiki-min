@@ -1,5 +1,2096 @@
 [
     {
+        "pk": 18,
+        "model": "badges.badge",
+        "fields": {
+            "description": "At least 75% of possible team members have at least 75 points.",
+            "hint": "Encourage team-mates to participate!",
+            "image": "",
+            "points": 10,
+            "label": "MTM",
+            "priority": 180,
+            "theme": "3",
+            "award_trigger": "daily",
+            "award_condition": "team_member_point_percent(75, 75)",
+            "slug": "mega-team",
+            "name": "Mega Team"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "badges.badge",
+        "fields": {
+            "description": "At least 50% of possible team members have at least 50 points.",
+            "hint": "Encourage team-mates to participate!",
+            "image": "",
+            "points": 10,
+            "label": "STM",
+            "priority": 170,
+            "theme": "2",
+            "award_trigger": "daily",
+            "award_condition": "team_member_point_percent(50, 50)",
+            "slug": "super-team",
+            "name": "Super Team"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "badges.badge",
+        "fields": {
+            "description": "Have reported one legitimate bug to administrators.",
+            "hint": "Found a bug?  Let us know!",
+            "image": "",
+            "points": 20,
+            "label": "DBG",
+            "priority": 150,
+            "theme": "1",
+            "award_trigger": "daily",
+            "award_condition": "False",
+            "slug": "white-hat",
+            "name": "White Hat"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "badges.badge",
+        "fields": {
+            "description": " Have referred at least 30 new players to Kukui Cup.",
+            "hint": "Gather more players!",
+            "image": "",
+            "points": 20,
+            "label": "URF",
+            "priority": 140,
+            "theme": "5",
+            "award_trigger": "daily",
+            "award_condition": "referring_count(30)",
+            "slug": "ultra-referrer",
+            "name": "Ultra Referrer"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "badges.badge",
+        "fields": {
+            "description": " Have referred at least 20 new players to Kukui Cup.",
+            "hint": "Gather more players!",
+            "image": "",
+            "points": 20,
+            "label": "MRF",
+            "priority": 130,
+            "theme": "4",
+            "award_trigger": "daily",
+            "award_condition": "referring_count(20)",
+            "slug": "mega-referrer",
+            "name": "Mega Referrer"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "badges.badge",
+        "fields": {
+            "description": " Have referred at least 10 new players to Kukui Cup.",
+            "hint": "Gather more players!",
+            "image": "",
+            "points": 20,
+            "label": "SRF",
+            "priority": 120,
+            "theme": "3",
+            "award_trigger": "daily",
+            "award_condition": "referring_count(10)",
+            "slug": "super-referrer",
+            "name": "Super Referrer"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "badges.badge",
+        "fields": {
+            "description": "At least 90% of possible team members have at least 90 points.",
+            "hint": "Encourage team-mates to participate!",
+            "image": "",
+            "points": 10,
+            "label": "UTM",
+            "priority": 190,
+            "theme": "4",
+            "award_trigger": "daily",
+            "award_condition": "team_member_point_percent(90, 90)",
+            "slug": "ultra-team",
+            "name": "Ultra Team"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "badges.badge",
+        "fields": {
+            "description": "Have received the social bonus five times.",
+            "hint": "Work together!",
+            "image": "",
+            "points": 20,
+            "label": "SSC",
+            "priority": 110,
+            "theme": "2",
+            "award_trigger": "smartgrid",
+            "award_condition": "social_bonus_count(5)",
+            "slug": "super-social",
+            "name": "Super Social"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "badges.badge",
+        "fields": {
+            "description": "Have completed all Level 4 non-event/excursion actions.",
+            "hint": "Complete more actions!",
+            "image": "",
+            "points": 20,
+            "label": "LV4",
+            "priority": 100,
+            "theme": "1",
+            "award_trigger": "smartgrid",
+            "award_condition": "completed_level(4)",
+            "slug": "level-4-master",
+            "name": "Level 4 Master"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "badges.badge",
+        "fields": {
+            "description": "Have completed all Level 3 non-event/excursion actions.",
+            "hint": "Complete more actions!",
+            "image": "",
+            "points": 20,
+            "label": "LV3",
+            "priority": 90,
+            "theme": "5",
+            "award_trigger": "smartgrid",
+            "award_condition": "completed_level(3)",
+            "slug": "level-3-master",
+            "name": "Level 3 Master"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "badges.badge",
+        "fields": {
+            "description": "Have completed all Level 2 non-event/excursion actions.",
+            "hint": "Complete more actions!",
+            "image": "",
+            "points": 20,
+            "label": "LV2",
+            "priority": 80,
+            "theme": "4",
+            "award_trigger": "smartgrid",
+            "award_condition": "completed_level(2)",
+            "slug": "level-2-master",
+            "name": "Level 2 Master"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "badges.badge",
+        "fields": {
+            "description": "Have completed all Level 1 non-event/excursion actions.",
+            "hint": "Complete more actions!",
+            "image": "",
+            "points": 20,
+            "label": "LV1",
+            "priority": 70,
+            "theme": "3",
+            "award_trigger": "smartgrid",
+            "award_condition": "completed_level(1)",
+            "slug": "level-1-master",
+            "name": "Level 1 Master"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "badges.badge",
+        "fields": {
+            "description": "Have been committed to all possible commitments.",
+            "hint": "Keep making commitments!",
+            "image": "",
+            "points": 20,
+            "label": "ULC",
+            "priority": 60,
+            "theme": "2",
+            "award_trigger": "smartgrid",
+            "award_condition": "completed_all_of(action_type='commitment')",
+            "slug": "ultra-committed",
+            "name": "Ultra Committed"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "badges.badge",
+        "fields": {
+            "description": "Have committed to five commitments simultaneously.",
+            "hint": "Keep making commitments!",
+            "image": "",
+            "points": 10,
+            "label": "SPC",
+            "priority": 50,
+            "theme": "1",
+            "award_trigger": "smartgrid",
+            "award_condition": "completed_some_of(5, action_type='commitment')",
+            "slug": "super-committed",
+            "name": "Super Committted"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "badges.badge",
+        "fields": {
+            "description": "Have visited the site nine days in a row.",
+            "hint": "Keep coming back!",
+            "image": "",
+            "points": 20,
+            "label": "9PT",
+            "priority": 40,
+            "theme": "4",
+            "award_trigger": "daily",
+            "award_condition": "daily_visit_count(9)",
+            "slug": "nine-peater",
+            "name": "Nine Peater"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "badges.badge",
+        "fields": {
+            "description": "Have visited the site six days in a row.",
+            "hint": "Keep coming back!",
+            "image": "",
+            "points": 20,
+            "label": "6PT",
+            "priority": 30,
+            "theme": "3",
+            "award_trigger": "daily",
+            "award_condition": "daily_visit_count(6)",
+            "slug": "six-peater",
+            "name": "Six Peater"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "badges.badge",
+        "fields": {
+            "description": "Visited the site 3 days in a row.",
+            "hint": "Keep coming back!",
+            "image": "",
+            "points": 10,
+            "label": "3PT",
+            "priority": 20,
+            "theme": "2",
+            "award_trigger": "daily",
+            "award_condition": "daily_visit_count(3)",
+            "slug": "three-peater",
+            "name": "Three Peater"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "badges.badge",
+        "fields": {
+            "description": "Finish any five actions successfully.",
+            "hint": "Keep doing actions!",
+            "image": "",
+            "points": 10,
+            "label": "NOV",
+            "priority": 10,
+            "theme": "1",
+            "award_trigger": "daily",
+            "award_condition": "completed_some_of(5)",
+            "slug": "daily-visitor",
+            "name": "Novice"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "badges.badge",
+        "fields": {
+            "description": "The team has achieved the goal for the Daily Energy Goal game three days in a row.",
+            "hint": "Keep team energy use low!",
+            "image": "",
+            "points": 10,
+            "label": "HTR",
+            "priority": 160,
+            "theme": "5",
+            "award_trigger": "daily",
+            "award_condition": "daily_energy_goal_count(3)",
+            "slug": "energy-hat-trick",
+            "name": "Energy Hat Trick"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "badges.badge",
+        "fields": {
+            "description": "FSP: Awarded to players who complete: 1 of each type of activity.",
+            "hint": "Do more types of activities.",
+            "image": "",
+            "points": 10,
+            "label": "FSP",
+            "priority": 200,
+            "theme": "2",
+            "award_trigger": "smartgrid",
+            "award_condition": "completed_some_full_spectrum()",
+            "slug": "full-spectrum",
+            "name": "Full Spectrum"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "rules",
+            "parent_topic": null,
+            "slug": "event-ties",
+            "contents": "In the event that two or more individuals (or lounges) are tied for the most points, then the timestamp associated with the final goal, commitment, or activity associated with the individuals (or lounges) will be used to break the tie. In other words, the individual (or lounges) who got to their final point total first will be declared the winner. In the remote event that the final timestamps are equal, a coin toss will be used to decide the winner.\r\n\r\nGiven that energy consumption is measured down to the watt-hour, we do not anticipate that any floor could tie with respect to their consumption. In case that this does occur, a coin toss will be used to decide the winner.",
+            "title": "In the Event of Ties"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "faq",
+            "parent_topic": null,
+            "slug": "how-is-energy-goal-picked",
+            "contents": "In the energy goal game on the [Go Low page](/energy), there is obviously an energy goal that has been set for your lounge. The numeric value of the goal (in kilowatt-hours) was set by measuring the baseline energy use in your lounge in the period before the Kukui Cup started, and then reducing it by a certain percentage.\r\n\r\nSince the energy goal is based on the usage of your particular lounge, it is intended to be a reachable goal. And every day your lounge meets the goal, everyone playing in your lounge gets 20 points!",
+            "title": "How is the energy goal picked?"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "rules",
+            "parent_topic": null,
+            "slug": "making-commitments",
+            "contents": "Some of the activities in the Smart Grid Game involve commitments, and you can engage in up to five commitments at any one time. We notice that you are committed to just \"N\" commitments. Why not go for all five and earn the super-committed badge for energy conservation? To make a commitment, go to the Get Nutz page and find <5 - N> more commitments that you are comfortable carrying out. Remember that a commitment only lasts for five days and then have to renew it if you want to continue the commitment. You get points for each commitment you complete for a five day period. ",
+            "title": "Making Commitments"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "rules",
+            "parent_topic": null,
+            "slug": "setting-conservation-goals",
+            "contents": "One of the most challenging games in the Kukui Cup is the Daily Energy Goal. We have collected data on your lounge's energy usage since the beginning of the semester, and for this quest, you need to work with your lounge mates to reduce your lounge's overall usage by 5%. Each day that your lounge meets or beats this conservation goal, you and everyone else in your lounge will earn Kukui Cup points. To set a conservation goal, start by going to the Go Low page by clicking on the energy meter icon at the top of this page. Once there, find out your lounge's current consumption for today and see if it's above or below the goal. Then do whatever you can personally to minimize your energy consumption for the remainder of today, and encourage your lounge mates to do the same. See the Go Low page for suggestions on what to do. If you're successful, your lounge will have used less energy than the goal by midnight tonight, and everyone in your lounge will get awarded Kukui Cup points! ",
+            "title": "Setting Conservation Goals"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "rules",
+            "parent_topic": null,
+            "slug": "award-categories-and-prizes",
+            "contents": "Round 1 Awards:\r\nCategory\tAward\r\nIndividual on each team who gained the most points. \t$25 gift certif.\r\nTeam that gained the most points (across all groups). \tIce cream party\r\nTeam that reduced energy use the most (across all groups). \tIce cream party\r\nRound 2 Awards:\r\nCategory\tAward\r\nIndividual on each team who gained the most points. \t$25 gift certif.\r\nTeam that gained the most points (across all groups). \tIce cream party\r\nTeam that reduced energy use the most (across all groups). \tIce cream party\r\nGrand Prize Awards:\r\nCategory\tAward\r\nIndividual per dorm with highest number of points. \tiPod touch\r\nTeam with highest number of points. \tPizza party\r\nTeam that reduced energy use the most. \tPizza party",
+            "title": "Award Categories and Prizes"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "rules",
+            "parent_topic": null,
+            "slug": "terms-and-conditions",
+            "contents": "<h3>Motivation</h3>\r\nOne of the goals of the Kukui Cup is to learn more about the factors which help people to make sustained, positive changes to their energy behaviors.\r\n<h3>Kinds of data collected</h3>\r\nIn order to accomplish this goal, we wish to collect and analyze data about your participation in the competition.  This data takes three forms:\r\n<ol>\r\n<li> Data collected from your interactions with this website.  We will collect data about the things you do while logged in to this website, such as your activities, goals, and commitments.  This helps us to understand which of these tasks are interesting and helpful.\r\n<li> Data gathered through interviews and questionnaires.  We will contact a subset of participants to request a short interview and/or to fill out an online questionnaire.  This data will help us to understand more about the strengths and weaknesses of our approach.\r\n<li> Data gathered about the electricity use of your lounge (A-E, pairs of floors) in aggregate. This aggregate data on electricity does not provide us with any information on the electricity usage of individual rooms.\r\n</ol>\r\n\r\n<h3>Privacy</h3>\r\nNo identifying information about you will be made available in any research publications resulting from this study.  \r\n<p>\r\nNote that as part of your participation in the competition, information such as your \"public commitments\" will be made available to others via mechanisms such as the Kukui Cup \"wall\" in your home page. The website may offer you the opportunity to share your competition activities on Facebook. If you actively choose to share data with Facebook, then public commitments and activities will be transmitted to Facebook. However, we record no data from Facebook (such as your friend list).\r\n\r\n<h3>If you do not wish to participate</h3>\r\nYour participation in this study is voluntary. If you decide you do not wish to participate in this study at any time, please contact Philip Johnson (<a href=\"mailto:johnson@hawaii.edu\">johnson@hawaii.edu</a>, 956-3489, POST 307, University of Hawaii). We will remove your data from all analyses.\r\n<p>\r\nYou can decline to participate in this study but still participate in the Kukui Cup.   Your decision to participate or not has no impact on your ability to win prizes or participate in events associated with the competition. Simply continue to participate in the competition, and contact Prof. Johnson to have your information removed from the study data.",
+            "title": "Terms and Conditions"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "rules",
+            "parent_topic": 3,
+            "slug": "point-competitions",
+            "contents": "In an individual competition, you compete to accumulate the most points by performing various actions, including activities, events, and commitments. To win in the individual competition, you simply have to accumulate the most points. \r\n\r\nLounges are also ranked by how many points their residents earned, and there are prizes for lounges too.",
+            "title": "Point competitions"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "my-achievements",
+            "contents": "This panel shows what you have accomplished in the Kukui Cup so far. The top portion of the window shows things that are pending, such as current commitments and activities that are waiting for verification from the administrators. The bottom portion shows activities that are completed, along with how many points you earned for each one.\r\n\r\nYou can go to the activity page by clicking on the name of the activity.",
+            "title": "My Achievements"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "rules",
+            "parent_topic": null,
+            "slug": "competitions",
+            "contents": "The Kukui Cup supports a variety of competitions:\r\n<ul>\r\n<li> The \"literacy\" competition encourages you to learn about energy, water, and other resource usage through the smart grid game and other activities, all which earn you points.\r\n<li> The \"energy\" competition tracks your energy usage through meters installed in your team's residence. \r\n<li> The \"water\" competition tracks your water usage through meters installed in your team's residence.\r\n</ul>\r\n\r\nNot all Kukui Cup challenges support all competitions.",
+            "title": "Competitions"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "rules",
+            "parent_topic": 3,
+            "slug": "lounge-energy-competition",
+            "contents": "In the lounge energy competition, pairs of floors in each Hale Aloha tower compete as a unit. Each tower is divided into five lounges consisting of floors 3-4 (lounge A), 5-6 (lounge B), 7-8 (lounge C), 9-10 (lounge D), and 11-12 (lounge E). To win in the lounge energy competition, your lounge must use the least energy across all the lounges in the 4 Hale Aloha towers.",
+            "title": "Lounge Energy Competition"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "rules",
+            "parent_topic": null,
+            "slug": "timeline",
+            "contents": "The competition lasts three weeks, starting Monday October 17 at 12:01 AM, and ending at midnight on Sunday November 6.\r\n\r\nTo provide multiple chances to win, the competition is divided into three week-long \"rounds\": Round 1, Round 2, as well as an overall \"grand prize\" round in week 3.\r\n\r\nAfter the first week of competition, the winners of Round 1 will be announced based upon those individuals who accumulated the most points and those lounges who used the least amount of energy.\r\n\r\nAfter the second week of competition, the winners of Round 2 will be announced. Round 2 winners are based only on points and energy use from the second week of the competition.\r\n\r\nAfter the third week of competition, the \"Grand Prize\" winners will be announced. The Grand Prize winners are based upon all the overall points and energy use from all 3 weeks. \r\n\r\n<iframe src=\"https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=hp27n91330a92lkesc6bhoqgqo%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=Pacific%2FHonolulu&dates=20111001%2F20111031\" style=\" border-width:0 \" width=\"800\" height=\"600\" frameborder=\"0\" scrolling=\"no\"></iframe>",
+            "title": "Timeline"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "rules",
+            "parent_topic": null,
+            "slug": "performing-activities",
+            "contents": "Some of the activites in the Smart Grid Game involve you to watch a video, attend an event, or do certain activities around the dorms. To do an activity, go to the Get Nutz page and find an activity that you would like to perform. After performing an activity, there will be either questions, code inputs, or image uploads that you will have to provide to prove that you have done the activity. After an Admin approves the activity you done, you will get your points!",
+            "title": "Performing Activities"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "faq",
+            "parent_topic": null,
+            "slug": "what-plug-load",
+            "contents": "A plug load is the energy consumed by any electronic device that's plugged into a socket. So most of the energy use in your room comes from plug loads, plus the ceiling light.",
+            "title": "What is plug load?"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "faq",
+            "parent_topic": null,
+            "slug": "can-i-collaborate-people-other-lounges",
+            "contents": "Yes you can! Some events and activities have social bonus points that will be added to your accumulated ponts if attend the event or activity with someone else from Hale Aloha.",
+            "title": "Can I collaborate with people on other lounges?"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "faq",
+            "parent_topic": null,
+            "slug": "how-do-i-contact-you-questions",
+            "contents": "You could use the \"Ask an Admin\" on the [Help page](/help/). This will send in your question to an Admin who will reply to you with an available answer. Also, at the top of every page is a \"Send Feedback\" button that you can use to ask a question from anywhere on the website.",
+            "title": "How do I contact you with questions?"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "faq",
+            "parent_topic": null,
+            "slug": "how-does-raffle-work",
+            "contents": "The Raffle Game provides a different way to win prizes, a way that does not require you to be the number 1 ranked lounge or person. Each time you accumulate 25 Kukui Cup points, you receive 1 raffle ticket, which you can allocate into a drawing for one or more of the prizes in the raffle. Your chances of winning that prize correspond to the percentage of tickets allocated to that prize that you contributed. You can change your ticket allocation at any time during a round. The more points you earn, the more tickets you receive, and the higher your chances of winning prizes in the raffle.\r\n\r\nYour raffle tickets don't expire at the end of Round 1 or Round 2, so you can save them up if you want. But they do expire at the end of the Kukui Cup, so don't wait too long!",
+            "title": "How does the raffle work?"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "task-details-widget-help",
+            "contents": "You will see the detailed information of the activity in this widget.  <p/> You will be asked to either complete the activity or sign up for an event. after event or commitment period, you can come back here to claim the rest of your points.",
+            "title": "Task Details Widget Help"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "smart-grid-game",
+            "contents": "Welcome to the Smart Grid Game! Each square contains an activity you can complete to earn points.\r\n\r\nGrid squares containing numbers are activities that you have not yet completed, and the number shows how many points the activity is worth.\r\n\r\nGrid squares with the lock icon ![lock icon](/site_media/staticimages/lock24.png) are locked, but you can click on the lock icon to see how to unlock it. Usually, you need to complete some other activities in order to unlock an activity.\r\n\r\nOnce an activity is completed, a checkmark <img alt=\"checkmark\" src=\"/site_media/static/images/icons/icon-done.png\" width=\"12\"/> will appear in the upper left corner of the square.\r\n\r\nIf any activity needs your attention, an exclamation point <img alt=\"checkmark\" src=\"/site_media/static/images/icons/icon-exclamation2.png\" width=\"12\"/> will appear in the upper left corner of its square. You might need to correct your answer to a question, the time period for a commitment might be completed, or an event or excursion you signed up for has finished so you can come back to claim the rest of your points.",
+            "title": "Smart Grid Game"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "energy-goal-game",
+            "contents": "The Daily Energy Goal Game is a way to keep your lounge on track to win the energy competition. This panel shows how much energy your lounge has used so far today, compared to an energy reduction goal set by the Kukui Cup administrators. If the traffic light is:\r\n\r\n* <FONT COLOR=\"ff0000\">Red</FONT>, it means your lounge is currently exceeding the energy consumption goal.\r\n* <FONT COLOR=\"FCD116\">Yellow</FONT>, it means your lounge is close to using more energy than your goal\r\n* <FONT COLOR=\"00ff00\">Green</FONT>, your lounge is doing a great job so keep it up!\r\n\r\nIf your lounge is able to keep the energy usage under the goal for the entire day, everyone in your lounge will earn 20 points.",
+            "title": "Energy Goal Game"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "lounge-power",
+            "contents": "This panel shows how much power your lounge is using right now in watts. It updates every 15 seconds.\r\n\r\nYou can use this power gauge to run an experiment: try turning something on or off and check if you can see the difference in your lounge's power use.",
+            "title": "Lounge Power"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "faq",
+            "parent_topic": null,
+            "slug": "how-screenshot-mac",
+            "contents": "A screenshot is a picture of what is currently displayed on the screen. To take a screenshot on a Macintosh:\r\n\r\n1. Make sure your screen is showing what you want to capture\r\n2. Hold down the following three keys at the same time Command (&#8984;), Shift, and the number 3 (Command-Shift-3)\r\n3. A file will be created on the desktop titled \"Screen shot\" followed by the current date and time.\r\n4. You can now upload that screen shot file to the Kukui Cup.",
+            "title": "How do I take a screenshot on a Mac?"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "activity-details",
+            "contents": "This panel describes an activity that you can perform to earn points. Some activities involve watching a video, others will require you to go off and do something.\r\n\r\nWhen you complete an activity, click the **I Did This!** button at the bottom of the panel, and you will be prompted for some sort of verification: answering a question, uploading a picture, etc. An administrator will then review your answer (usually within a few hours), and if your answer is approved, you will receive your points.",
+            "title": "Activity help"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "canopy-quests",
+            "contents": "The Canopy quest bar is like the regular quest bar: it shows 3 quests that you can undertake. Clicking on the title of a quest causes the quest bar to show the details of that particular quest. A second click on the title will hide the details.\r\n\r\nCanopy quests are intended to explore the Hale Aloha real-time energy data in more depth. Each quest will ask you to examine the advanced energy visualizations and answer some questions. You can post your answers to the Canopy Feed for other Canopy members to comment on.",
+            "title": "Canopy Quests"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "quests",
+            "contents": "The quest bar shows up to 3 quests that you can undertake. Clicking on the title of a quest will show the details of that particular quest. A second click on the title will hide the details.\r\n\r\nQuests are intended to guide you through the Kukui Cup website, highlighting interesting things and encouraging you to explore the competition. Each quest consists of a series of steps for you to undertake.\r\n\r\nIf a quest sounds interesting, click the **\"I accept this quest\"** button in the lower right corner of the quest description.\r\n\r\nIf you aren't interested in a quest, you can also skip it by clicking the **\"I am not interested in this quest\"** button.\r\n\r\nWhen you have completed a quest, you will get a notification of your success, which you can share on Facebook if you choose to. Early quests are easy, while later quests are more complicated. Go forth and explore!",
+            "title": "Quest help"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "upcoming-events",
+            "contents": "This widget shows a list of upcoming events you can attend as part of the competition. Each row shows the name, number of points you can earn by attending, the time, and the place of the event. You can click on the event to find out more about it, and see who else is attending.\r\n\r\nBelow the event list, you can enter an attendance code from an event you attended. When you enter the code, you are awarded the points.",
+            "title": "Upcoming Events help"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "points-scoreboard",
+            "contents": "This scoreboard rotates between 3 displays: the ranking of lounges, ranking of individuals across all towers (overall ranking), and the ranking of individuals just within your lounge. You and your lounge will be displayed in boldface in the scoreboard.\r\n\r\nCheck the scoreboard to see where you and your lounge stand in the competition.",
+            "title": "Points Scoreboard"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "social-bonus",
+            "contents": "The **social bonus** is a way to have fun doing things with your friends and earn extra points! Certain activities and events are eligible for the social bonus. It's really easy:\r\n\r\n1. Plan to attend an event, make a commitment, or perform an activity with one or more friends\r\n2. Make sure you have your friend's Kukui Cup email address\r\n3. When you click the button to get your points, you will be prompted for your friend's Kukui Cup email address\r\n4. If the friend you entered does the same activity, you get the social bonus points\r\n5. Your friend can enter your email address so they can also get the social bonus",
+            "title": "Social bonus"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "commitment-details",
+            "contents": "This panel describes a commitment that you can make to earn points. If this is something you would like to commit to, click the **\"I will do this\"** button. Each commitment lasts a certain number of days, and you must live up to your commitment while it is active. You can have up to 5 commitments active at one time.\r\n\r\nOnce the time period is up, you can return to this page to get the rest of your points.",
+            "title": "Commitment help"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "event-details",
+            "contents": "This panel describes an event that you can attend to earn points. If the event sounds interesting, you can click the **\"I want to sign up\"** button to indicate that you plan to attend and you will get 2 points for signing up.\r\n\r\nAt the event, there will be someone from the Kukui Cup handing out little slips of paper called *attendance codes*. When the event is over, you can come back to this page and type in the attendance code to get the rest of your points.",
+            "title": "Event help"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "excursion-details",
+            "contents": "This panel describes an excursion that you can go on to earn points. Excursions generally involve traveling off campus, and transportation will be provided by the Kukui Cup.\r\n\r\nIf the excursion sounds interesting, you can click the **\"I want to sign up\"** button to indicate that you plan to attend and you will get 2 points for signing up.\r\n\r\nOn the excursion, there will be someone from the Kukui Cup handing out little slips of paper called *attendance codes*. When the excursion is over, you can come back to this page and type in the attendance code to get the rest of your points.",
+            "title": "Excursion help"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "energy-scoreboard",
+            "contents": "The energy scoreboard shows how your lounge is doing in the energy competition. The goal of the energy competition is to be the lounge that uses the least amount of electricity.\r\n\r\nThe scoreboard alternates between showing the amount of energy used by each lounge during the current round, and the amount of energy used overall.",
+            "title": "Energy scoreboard"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "news-directory",
+            "contents": "This panel shows you some of the top participants in your lounge. If you click on any of the lounge members, you will be taken to a page that shows more details about each member, including their: points, ranking, badges, and commitments.",
+            "title": "Lounge Members"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "news-feed",
+            "contents": "The news feed is a place where you can discuss things or organize with your loungemates. Only members of your lounge can see your lounge newsfeed. To post, just type something into the text box, and press the **Post** button.\r\n\r\nAs members of your lounge do things in the competition, automatic posts will be made to the news feed so you can see what your loungemates are up to in the Cup.",
+            "title": "News Feed Help"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "most-popular",
+            "contents": "This panel shows the most popular activities, commitments, events, and excursions in the competition. If one of them catches your eye, just click on it to see more information about it.",
+            "title": "Most Popular"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "my-public-commitments",
+            "contents": "This is a list of the commitments you have made. You can make up to 5 commitments at one time, and these commitments are public to other members of your lounge.",
+            "title": "My Public Commitments"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "prizes",
+            "contents": "This panel shows the various prizes that can be won during the competition, cycling through the different rounds of the competition. It will also show who the current leader is for each prize. For more information on a prize, click on the name of the prize.",
+            "title": "Prizes"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "raffle-game",
+            "contents": "This panel displays the *Raffle Game*. For every 25 points you earn in the competition, you get 1 raffle ticket. Each round of the competition has a set of prizes that are awarded through the Raffle Game. You can allocate your raffle tickets to any of the prizes, as can all the other Kukui Cup players. At the end of the round, a winner is selected from the tickets allocated to that prize.\r\n\r\nSince allocating more tickets to a prize increases your odds of winning it, you can decide whether you want to focus on one particular prize, or spread your tickets over multiple prizes. You can shift your ticket allocations as much as you want until the deadline given at the bottom of the panel. A [list of the raffle prizes in all rounds](/help/faq/list-raffle-prizes/) is available, so you can decide on your allocation strategy.\r\n\r\nNote that raffle tickets are separate from points, you won't reduce your score by allocating raffle tickets. Good luck!",
+            "title": "Raffle Game"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "my-info",
+            "contents": "This panel displays your personal profile information. Here you can change your:\r\n\r\n* Display name (this is the name others in your lounge will see, and how you will be identified on scoreboards)\r\n* Your picture (either upload a picture or grab from Facebook profile)\r\n* Your preferred email address for reminders\r\n* Your mobile number and carrier if you want to receive reminder texts for events\r\n\r\nRemember to click the **Save Changes** link at the bottom of the panel after you make any changes.",
+            "title": "My Info"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "my-badges",
+            "contents": "This panel displays all the badges you have acquired so far. You receive badges for certain achievements in the game. For some hints on what badges are available and how you might get them, click on the [See Badge Catalog](/profile/badges/) link.",
+            "title": "My Badges"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "advanced-visualizations",
+            "contents": "This panel provides 4 different visualizations of energy use in Hale Aloha:\r\n\r\nThe **Hot Spots** visualization shows hourly energy use for one lounge over a 7 day period. Large spots mean high energy use, small spots mean low energy use. The spots are red if they are among the highest 5% of energy used. This visualization lets you look for patterns of energy use in a particular lounge.\r\n\r\nThe **Heat Map** visualization shows energy use for all lounges in a particular tower over a 24 hour or 21 day period. Green squares represent lower energy use, while red squares show higher energy use. At a glance, you can see that times and what lounges seem to be using the most and least energy.\r\n\r\nThe **Line Graph** visualization shows energy or power use in one or more lounges as a line graph. You can scroll around the chart, zoom in, and see what the energy or power use was at any point in the graph.\r\n\r\nThe **Power Meter** visualization shows the current power levels on 5 lounges that you select. Note that the middle of each gauge represents the typical power for this lounge at this time of day, so the gauge needles aren't directly comparable.",
+            "title": "Advanced Visualizations"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "canopy-feed",
+            "contents": "The Canopy feed is like the Lounge newsfeed on the News page, but only members of the Canopy can see and post to the Canopy feed. You can use the Canopy feed to communicate with other Canopy members and sometimes administrators might drop by.",
+            "title": "Canopy Feed"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "canopy-directory",
+            "contents": "This panel shows you some of the other Canopy members. If you click on any of the lounge members, you will be taken to a page that shows more details about each member, including their: points, ranking, badges, and commitments.",
+            "title": "Canopy Members"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "attendance-code",
+            "contents": "When you attend a Kukui Cup event or excursion, make sure you get an attendance code from one of the Kukui Cup staff members at the event. The code will come on a little slip of paper, make sure you save it! When the event is finished, you can type the code into the field here and click **Submit**, and then you will get the points you earned by attending the event.\r\n\r\nNote that each attendance code is only good for the event it was issued at, and can only be used once, like a ticket to a concert. So don't share your attendance code with friends, make sure they get their own!",
+            "title": "Attendance Code Entry"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "canopy-missions",
+            "contents": "Canopy Missions are similar to the quests you are familiar with from the \"forest\" part of the Kukui Cup. They guide you through things to do in the Canopy. There are two types of missions:\r\n\r\n * **Solo** missions can be completed by yourself. Just click on the mission title, and a brief description will be displayed. Linked from the mission are one or more Canopy activities that you must finish to complete the mission.\r\n\r\n* **Group** missions require you to team up with 1 or 2 other Canopy members. You must sign up for group missions by clicking the **I am up for this mission** button, which then shows you are interested in the mission. Get together with other Canopy members who are interested in the mission and look at the associated activity. When your group has completed the activity, one member from your team will submit the results of the activity, and list the other members of the team in the submission dialog box. Once approved, all team members will get the Karma.",
+            "title": "Canopy Missions"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "canopy-karma",
+            "contents": "The Canopy Karma scoreboard shows you the amount of Karma earned by each member of the Canopy. Canopy Karma is separate from normal Kukui Cup points, and does not earn you raffle tickets. Mostly, it's for bragging rights, though there is a prize for the person with the most Canopy Karma at the end of the competition.",
+            "title": "Canopy Scoreboard"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "rules",
+            "parent_topic": null,
+            "slug": "what-kukui-cup",
+            "contents": "The Kukui Cup residence hall energy competition is a blend of real world and online activities. In the real world, participants attend events, engage in real-world activities like parties, scavenger hunts, and artistic/musical events, win prizes, and most importantly, modify their energy-related behaviors. In the online world of the Kukui Cup web application, participants earn points, achieve badges, increase their energy literacy through readings and videos, and use social networking mechanisms to engage with friends about the event. Our hope is that this combination of real and virtual activities complement and reinforce each other.",
+            "title": "What is the Kukui Cup?"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "water-goal-game",
+            "contents": "The daily water goal game is designed to reward you for conserving water.  Each day, a Kukui Cup administrator will read your team's water meter and record the results.  If you can conserve water beyond a baseline value calculated for your team, then every participating team member will receive points!",
+            "title": "Water Goal Game"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "help.helptopic",
+        "fields": {
+            "category": "widget",
+            "parent_topic": null,
+            "slug": "water-scoreboard",
+            "contents": "The water scoreboard shows how your lounge is doing in the water competition. The goal of the water competition is to be the lounge that uses the least amount of water.\r\n\r\nThe scoreboard alternates between showing the amount of water used by each team during the current round, and the amount of water used overall.",
+            "title": "Water Scoreboard"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "notifications.noticetemplate",
+        "fields": {
+            "notice_type": "raffle-winner", 
+            "template": "Congratulations, you won a raffle prize '{{PRIZE.title}}' for {{PRIZE.round.name}} !  Please come to the upcoming awards party to claim your prize."
+        }
+    }, 
+    {
+        "pk": 2,
+        "model": "notifications.noticetemplate",
+        "fields": {
+            "notice_type": "commitment-ready", 
+            "template": "Your commitment '{{COMMITMENT.title}}' is ready for redemption! Click <a href='{% url activity_task \"commitment\" COMMITMENT.slug %}'>here</a> to get your points."
+        }
+    }, 
+    {
+        "pk": 3,
+        "model": "notifications.noticetemplate",
+        "fields": {
+            "notice_type": "round-transition", 
+            "template": "{{CURRENT_ROUND}} has started!"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "notifications.noticetemplate",
+        "fields": {
+            "notice_type": "prize-winner",
+            "template": "Congratulations, you won a prize '{{PRIZE.title}}' for {{PRIZE.round.name}} !  Please come to the upcoming awards party to claim your prize."
+        }
+    },
+    {
+        "pk": 1,
+        "model": "challenge_mgr.pageinfo",
+        "fields": {
+            "name": "home",
+            "title": "Home",
+            "introduction": "Home page",
+            "label": "Home",
+            "priority": 1,
+            "url": "/home",
+            "unlock_condition": "True"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "challenge_mgr.pageinfo",
+        "fields": {
+            "name": "learn",
+            "title": "Get Nutz",
+            "introduction": "* Play the Game\r\n* Earn Kukuicup points\r\n* See where you stand",
+            "label": "Get Nutz",
+            "priority": 2,
+            "url": "/learn",
+            "unlock_condition": "True"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "challenge_mgr.pageinfo",
+        "fields": {
+            "name": "energy",
+            "title": "Go Low",
+            "introduction": "* Observe Energy use\r\n* Track Energy goals\r\n* Compare usage to others",
+            "label": "Go Low",
+            "priority": 3,
+            "url": "/energy",
+            "unlock_condition": "game_enabled('Energy Game')"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "challenge_mgr.pageinfo",
+        "fields": {
+            "name": "water",
+            "title": "Drop Down",
+            "introduction": "* Observe Water use\r\n* Track Water goals\r\n* Compare usage to others",
+            "label": "Drop Down",
+            "priority": 4,
+            "url": "/water",
+            "unlock_condition": "game_enabled('Water Game')"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "challenge_mgr.pageinfo",
+        "fields": {
+            "name": "news",
+            "title": "News",
+            "introduction": "* What are people doing?\r\n* Your public comments\r\n* Top activities & events",
+            "label": "News",
+            "priority": 6,
+            "url": "/news",
+            "unlock_condition": "True"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "challenge_mgr.pageinfo",
+        "fields": {
+            "name": "win",
+            "title": "Prizes",
+            "introduction": "* See the prizes\r\n* Allocate your points\r\n* Monitor your chances",
+            "label": "Prizes",
+            "priority": 7,
+            "url": "/win",
+            "unlock_condition": "True"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "challenge_mgr.pageinfo",
+        "fields": {
+            "name": "profile",
+            "title": "Profile",
+            "introduction": "* Manage your Settings\r\n* Connect to facebook\r\n* Change your picture",
+            "label": "Profile",
+            "priority": 8,
+            "url": "/profile",
+            "unlock_condition": "True"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "challenge_mgr.pageinfo",
+        "fields": {
+            "name": "help",
+            "title": "Help",
+            "introduction": "* Watch intro video\r\n* Learn the rules\r\n* Ask an admin",
+            "label": "Help",
+            "priority": 9,
+            "url": "/help",
+            "unlock_condition": "True"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "challenge_mgr.pageinfo",
+        "fields": {
+            "name": "status",
+            "title": "Status",
+            "introduction": "* Mission Control\r\n* Status\r\n* Analytics",
+            "label": "Status",
+            "priority": 10,
+            "url": "/status",
+            "unlock_condition": "is_admin()"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "challenge_mgr.pageinfo",
+        "fields": {
+            "name": "admin",
+            "title": "Settings",
+            "introduction": "* Admin\r\n* Settings\r\n* Logs",
+            "label": "Settings",
+            "priority": 11,
+            "url": "/admin",
+            "unlock_condition": "is_admin()"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "home",
+            "enabled": true,
+            "page": 1
+        }
+    },
+    {
+        "pk": 20,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "smartgrid",
+            "location": "Left",
+            "priority": 1,
+            "enabled": true,
+            "page": 2
+        }
+    },
+    {
+        "pk": 21,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "upcoming_events",
+            "location": "Left",
+            "priority": 2,
+            "enabled": true,
+            "page": 2
+        }
+    },
+    {
+        "pk": 22,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "participation",
+            "location": "Right",
+            "priority": 2,
+            "enabled": true,
+            "page": 2
+        }
+    },
+    {
+        "pk": 23,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "scoreboard",
+            "location": "Right",
+            "priority": 1,
+            "enabled": true,
+            "page": 2
+        }
+    },
+    {
+        "pk": 30,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "resource_goal.energy",
+            "location": "Left",
+            "priority": 1,
+            "enabled": true,
+            "page": 3
+        }
+    },
+    {
+        "pk": 31,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "energy_power_meter",
+            "location": "Right",
+            "priority": 1,
+            "enabled": true,
+            "page": 3
+        }
+    },
+    {
+        "pk": 32,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "resource_scoreboard.energy",
+            "location": "Right",
+            "priority": 2,
+            "enabled": true,
+            "page": 3
+        }
+    },
+    {
+        "pk": 33,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "wallpost.user_wallpost",
+            "location": "Left",
+            "priority": 2,
+            "enabled": true,
+            "page": 3
+        }
+    },
+    {
+        "pk": 40,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "wallpost.user_wallpost",
+            "location": "Left",
+            "priority": 2,
+            "enabled": true,
+            "page": 4
+        }
+    },
+    {
+        "pk": 41,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "resource_scoreboard.water",
+            "location": "Right",
+            "priority": 1,
+            "enabled": true,
+            "page": 4
+        }
+    },
+    {
+        "pk": 42,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "resource_goal.water",
+            "location": "Left",
+            "priority": 1,
+            "enabled": true,
+            "page": 4
+        }
+    },
+    {
+        "pk": 60,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "wallpost.system_wallpost",
+            "location": "Left",
+            "priority": 2,
+            "enabled": true,
+            "page": 6
+        }
+    },
+    {
+        "pk": 61,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "upcoming_events",
+            "location": "Right",
+            "priority": 1,
+            "enabled": true,
+            "page": 6
+        }
+    },
+    {
+        "pk": 62,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "my_commitments",
+            "location": "Right",
+            "priority": 3,
+            "enabled": true,
+            "page": 6
+        }
+    },
+    {
+        "pk": 63,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "popular_tasks",
+            "location": "Right",
+            "priority": 2,
+            "enabled": true,
+            "page": 6
+        }
+    },
+    {
+        "pk": 64,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "team_members",
+            "location": "Left",
+            "priority": 1,
+            "enabled": true,
+            "page": 6
+        }
+    },
+    {
+        "pk": 70,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "prizes",
+            "location": "Left",
+            "priority": 1,
+            "enabled": true,
+            "page": 7
+        }
+    },
+    {
+        "pk": 71,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "raffle",
+            "location": "Right",
+            "priority": 1,
+            "enabled": true,
+            "page": 7
+        }
+    },
+    {
+        "pk": 80,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "badges",
+            "location": "Right",
+            "priority": 1,
+            "enabled": true,
+            "page": 8
+        }
+    },
+    {
+        "pk": 81,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "my_achievements",
+            "location": "Right",
+            "priority": 3,
+            "enabled": true,
+            "page": 8
+        }
+    },
+    {
+        "pk": 82,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "my_commitments",
+            "location": "Right",
+            "priority": 2,
+            "enabled": true,
+            "page": 8
+        }
+    },
+    {
+        "pk": 83,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "my_info",
+            "location": "Left",
+            "priority": 1,
+            "enabled": true,
+            "page": 8
+        }
+    },
+    {
+        "pk": 90,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "ask_admin",
+            "location": "Right",
+            "priority": 2,
+            "enabled": true,
+            "page": 9
+        }
+    },
+    {
+        "pk": 91,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "help.faq",
+            "location": "Left",
+            "priority": 2,
+            "enabled": true,
+            "page": 9
+        }
+    },
+    {
+        "pk": 92,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "help.intro",
+            "location": "Left",
+            "priority": 1,
+            "enabled": true,
+            "page": 9
+        }
+    },
+    {
+        "pk": 93,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "help.rule",
+            "location": "Right",
+            "priority": 1,
+            "enabled": true,
+            "page": 9
+        }
+    },
+    {
+        "pk": 100,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "action_feedback",
+            "enabled": true,
+            "page": 10
+        }
+    },
+    {
+        "pk": 101,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "logging",
+            "enabled": true,
+            "page": 10
+        }
+    },
+    {
+        "pk": 102,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "resource_scoreboard.energy",
+            "enabled": true,
+            "page": 10
+        }
+    },
+    {
+        "pk": 103,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "resource_scoreboard.water",
+            "enabled": true,
+            "page": 10
+        }
+    },
+    {
+        "pk": 104,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "scoreboard",
+            "enabled": true,
+            "page": 10
+        }
+    },
+    {
+        "pk": 105,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "status.actions",
+            "enabled": true,
+            "page": 10
+        }
+    },
+    {
+        "pk": 106,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "status.referrals",
+            "enabled": true,
+            "page": 10
+        }
+    },
+    {
+        "pk": 107,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "status.prizes",
+            "enabled": true,
+            "page": 10
+        }
+    },
+    {
+        "pk": 108,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "status.rsvps",
+            "enabled": true,
+            "page": 10
+        }
+    },
+    {
+        "pk": 109,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "status.users",
+            "enabled": true,
+            "page": 10
+        }
+    },
+    {
+        "pk": 110,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "status.wattdepot",
+            "enabled": true,
+            "page": 10
+        }
+    },    
+    {
+        "pk": 111,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "status.badges",
+            "enabled": true,
+            "page": 10
+        }
+    },
+    {
+        "pk": 112,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "status.DEGG",
+            "enabled": true,
+            "page": 10
+        }
+    },
+    {
+        "pk": 113,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "status.DWGG",
+            "enabled": true,
+            "page": 10
+        }
+    },
+    {
+        "pk": 1,
+        "model": "challenge_mgr.gameinfo",
+        "fields": {
+            "priority": 1,
+            "enabled": true,
+            "name": "Energy Game"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "challenge_mgr.gameinfo",
+        "fields": {
+            "priority": 2,
+            "enabled": true,
+            "name": "Water Game"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "challenge_mgr.gameinfo",
+        "fields": {
+            "priority": 3,
+            "enabled": true,
+            "name": "Smart Grid Game"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "challenge_mgr.gameinfo",
+        "fields": {
+            "priority": 4,
+            "enabled": true,
+            "name": "Top Score Game"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "challenge_mgr.gameinfo",
+        "fields": {
+            "priority": 5,
+            "enabled": true,
+            "name": "Raffle Game"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "challenge_mgr.gameinfo",
+        "fields": {
+            "priority": 6,
+            "enabled": true,
+            "name": "Participation Game"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "challenge_mgr.gameinfo",
+        "fields": {
+            "priority": 7,
+            "enabled": true,
+            "name": "Quest Game Mechanics"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "challenge_mgr.gameinfo",
+        "fields": {
+            "priority": 8,
+            "enabled": true,
+            "name": "Badge Game Mechanics"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "challenge_mgr.gameinfo",
+        "fields": {
+            "priority": 9,
+            "enabled": true,
+            "name": "Referral Game Mechanics"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "challenge_mgr.gamesetting",
+        "fields": {
+            "game": 1,
+            "widget": "energy_power_meter"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "challenge_mgr.gamesetting",
+        "fields": {
+            "game": 1,
+            "widget": "resource_goal.energy"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "challenge_mgr.gamesetting",
+        "fields": {
+            "game": 1,
+            "widget": "resource_scoreboard.energy"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "challenge_mgr.gamesetting",
+        "fields": {
+            "game": 2,
+            "widget": "resource_goal.water"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "challenge_mgr.gamesetting",
+        "fields": {
+            "game": 2,
+            "widget": "resource_scoreboard.water"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "challenge_mgr.gamesetting",
+        "fields": {
+            "game": 3,
+            "widget": "smartgrid"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "challenge_mgr.gamesetting",
+        "fields": {
+            "game": 3,
+            "widget": "upcoming_events"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "challenge_mgr.gamesetting",
+        "fields": {
+            "game": 4,
+            "widget": "prizes"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "challenge_mgr.gamesetting",
+        "fields": {
+            "game": 5,
+            "widget": "raffle"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "challenge_mgr.gamesetting",
+        "fields": {
+            "game": 7,
+            "widget": "quests"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "challenge_mgr.gamesetting",
+        "fields": {
+            "game": 8,
+            "widget": "badges"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "challenge_mgr.gamesetting",
+        "fields": {
+            "game": 6,
+            "widget": "participation"
+        }
+    },
+    {
+        "model": "quests.quest",
+        "fields": {
+            "completion_conditions": "completed_action('like-cup')",
+            "unlock_conditions": "completed_action('intro-video') and completed_action('cup-secrets') and not completed_action('like-cup')",
+            "name": "Get social",
+            "priority": 5,
+            "description": "To be successful, the Kukui Cup needs a lot of people to participate and we need your help. This quest is about getting the word out about the Kukui Cup to your social network.\r\n\r\nTo complete this quest, you will have to complete one activity: Like Kukui Cup on Facebook.\r\n\r\nFind this activity in the Smart Grid Game and complete it to finish off this quest.",
+            "quest_slug": "get-social"
+        },
+        "pk": 6
+    },
+    {
+        "model": "quests.quest",
+        "fields": {
+            "completion_conditions": "completed_action('cup-secrets')",
+            "unlock_conditions": "completed_action('intro-video') and not completed_action('cup-secrets')",
+            "name": "Learn Secrets of Kukui Cup Masters",
+            "priority": 1,
+            "description": "Do you want some hints about how to win the Kukui Cup? We've prepared a special video for you, called *Secrets of the Kukui Cup Masters*. Watch it to learn strategies for playing the Kukui Cup.\r\n\r\n**To complete this quest:**\r\n\r\n1. If you aren't already on the Get Nutz page, click on the Get Nutz icon in the navigation bar at the top of every page\r\n2. Click on the second square in the first column of the Smart Grid Game\r\n3. Watch the video\r\n4. Answer a question about it correctly\r\n5. Put your newly learned strategies to work",
+            "quest_slug": "learn-secrets"
+        },
+        "pk": 14
+    },
+    {
+        "model": "quests.quest",
+        "fields": {
+            "completion_conditions": "completed_action('intro-video')",
+            "unlock_conditions": "not completed_action('intro-video')",
+            "name": "Watch Intro Video",
+            "priority": 0,
+            "description": "Every quest starts with a single step, and yours should start by watching the Kukui Cup introduction video that you seem to have skipped when you logged in for the first time. The video will help you to understand what the Kukui Cup is all about, and briefly introduce you to the things you can do to win.\r\n\r\nTo watch the video:\r\n\r\n1. Click on the Get Nutz icon in the navigation bar at the top left of this web page\r\n2. Click on the first square in the first level of the Smart Grid Game (upper left corner of grid)\r\n3. Watch the video\r\n4. Answer a question about it correctly\r\n5. You are on your way to Kukui Cup domination!",
+            "quest_slug": "watch-intro-video"
+        },
+        "pk": 4
+    },
+    {
+        "model": "quests.quest",
+        "fields": {
+            "completion_conditions": "completed_some_of(action_type='event')",
+            "unlock_conditions": "completed_action('intro-video') and not completed_some_of(action_type='event')",
+            "name": "Sign up for an event",
+            "priority": 3,
+            "description": "Part of the Kukui Cup is a series of events scheduled throughout the competition. These events are designed to be fun and help you learn about energy and sustainability. You can sign up for an event to indicate your interest in attending, and see who else is going.\r\n\r\nSigning up for an event gets you 2 points. At the event, you will receive a little slip of paper that contains an attendance code. This code is like a ticket stub, it proves that you attended the event. Once the event is over, you can enter the attendance code to get the rest of your points (usually 20 points or more).\r\n\r\n**To complete this quest:**\r\n\r\n1. Go to the Get Nutz page\r\n2. Either pick an event from the **Upcoming Events** section, or click on an event square in the grid\r\n3. Read the about the event\r\n4. If you want to attend, click the \"I want to sign up\" button\r\n5. Attend the event when it happens.\r\n6. Don't forget to come back after the event with your attendance code to get the rest of your points.",
+            "quest_slug": "sign-event"
+        },
+        "pk": 8
+    },
+    {
+        "model": "quests.quest",
+        "fields": {
+            "completion_conditions": "completed_some_of(action_type='commitment')",
+            "unlock_conditions": "completed_action('intro-video') and not completed_some_of(action_type='commitment')",
+            "name": "Make a commitment",
+            "priority": 2,
+            "description": "One of the things you can do in the Kukui Cup is make a commitment. Commitments range from little things, like turning off the lights, to big things, like not eating meat. Each commitment lasts for 5 days, during which you agree to live up to the commitment. Once the 5 days are over, you come back to the site to collect your points.\r\n\r\nMaking a commitment earns you 2 points, and when you come back 5 days later to certify that you lived up to your commitment, you get another 5 points. To keep you focused, you can only commit to 5 things at a time.\r\n\r\n**To complete this quest:**\r\n\r\n1. If you aren't already on the Get Nutz page, click on the Get Nutz icon in the navigation bar at the top of every page\r\n2. Click on a commitment square (the legend shows which color squares are commitments).\r\n3. Read about the commitment you are being asked to make.\r\n4. If you are willing, click the **\"I will do this!\"** button\r\n5. Don't forget to come back in 5 days to get the rest of your points",
+            "quest_slug": "make-commitment"
+        },
+        "pk": 7
+    },
+    {
+        "model": "quests.quest",
+        "fields": {
+            "completion_conditions": "allocated_ticket()",
+            "unlock_conditions": "completed_action('intro-video') and has_points(25) and not allocated_ticket()",
+            "name": "Participate in the Raffle",
+            "priority": 4,
+            "description": "An exciting side game in the Kukui Cup is the Raffle Game, which you can find on the Prizes page. Click on the Prizes icon in the navigation bar to get to the Prizes page. The Raffle Game is on the right hand side of the Prizes page.\r\n\r\nFor every 25 points you earn, you get a raffle ticket. You can allocate your ticket(s) to any of the prizes in the raffle, and each ticket gives you one chance to win the prize at the end of the round. However, all the other players are also allocating their raffle tickets to the prizes, which lowers your odds. You can change your allocation of tickets at any time until the Raffle Game deadline shown below the list of prizes. At the end of the round, the Raffle Game randomly picks one ticket for each prize, and the owner of that ticket wins the prize!\r\n\r\n**Step by step:**\r\n\r\n1. Go to the **Prizes** page\r\n2. Pick one of the raffle prizes\r\n3. Allocate one ticket to it using the **+1** button.",
+            "quest_slug": "raffle-quest"
+        },
+        "pk": 11
+    },
+    {
+        "model": "quests.quest",
+        "fields": {
+            "completion_conditions": "completed_action('check-energy')",
+            "unlock_conditions": "completed_action('intro-video') and not completed_action('check-energy')",
+            "name": "Check lounge energy use",
+            "priority": 6,
+            "description": "While making commitments and completing activities is important, the other side of the Kukui Cup is reducing your lounge's energy usage.\r\n\r\nThe **Go Low** page can show you how much power & energy your lounge is using in real time.\r\n\r\nTo complete this quest, perform the \"Examine your lounge's energy use\" activity on the Get Nutz page. You'll find it under the **Let's Get Physical** category, on level 2 of the Smart Grid Game. You can switch between the levels by clicking on the tabs above the grid.",
+            "quest_slug": "check-lounge-energy-use"
+        },
+        "pk": 13
+    },
+    {
+        "model": "quests.quest",
+        "fields": {
+            "completion_conditions": "badge_awarded('super-committed')",
+            "unlock_conditions": "completed_some_of(action_type='commitment') and not badge_awarded('super-committed')",
+            "name": "Get the Super Committed badge",
+            "priority": 6,
+            "description": "While earning points and conserving energy is great, wouldn't it be awesome if there was a way to get a little recognition for all your hard work? Lucky for you, there is: **BADGES**. Badges represent achievements reached during the game, both big and small.\r\n\r\nFor the most part, you'll have to discover the badges on your own, but we're going to give you a hint on this one. You will receive the Super Committed badge when you make 5 commitments (the maximum allowed by law). To complete this quest, you just need to get the badge by topping off your commitments to 5.\r\n\r\nYou know the drill by now: go to the Get Nutz page, click on a commitment square in the Smart Grid Game, and get your badge. *Note:* you may have to complete some other activities or look on different levels to get unlock all 5 commitments.",
+            "quest_slug": "get-super-committed-badge"
+        },
+        "pk": 12
+    },
+    {
+        "model": "quests.quest",
+        "fields": {
+            "completion_conditions": "completed_action('power-energy') and completed_action('energy-intuition')",
+            "unlock_conditions": "completed_action('intro-video')",
+            "name": "Learn about energy",
+            "priority": 2,
+            "description": "The Kukui Cup is all about energy: learning about it and conserving it. On this quest, you will learn some basic information about power and energy, which will give you a solid foundation for all the other energy-related activities in the game.\r\n\r\n**To complete this quest:** You must watch two videos (**Power & Energy**, and **Energy Intuition**) and answer a question about each.\r\n\r\nYou can find the videos in the Smart Grid Game, which is located on the Get Nutz page. To get there:\r\n\r\n1. If you aren't already on the Get Nutz page, click on the Get Nutz icon in the navigation bar at the top of every page\r\n2. Click on the third square in the **Get Started** column of the grid\r\n3. Watch the video (pay attention, as you will answer a question about it next)\r\n4. Click the **\"I Did This!\"** button\r\n5. Answer a question about the content of the video. If you don't know the answer, click Cancel and watch the video again.\r\n6. Click the **\"Back to Smart Grid Game\"** button on left side.\r\n7. The second video is the bottom square of the same column of the Smart Grid Game\r\n8. A Kukui Cup Admin will review your answer (usually in a few hours) and if you answered correctly, you will be awarded 10 points for each video.",
+            "quest_slug": "learn-about-energy"
+        },
+        "pk": 5
+    },
+    {
+        "model": "quests.quest",
+        "fields": {
+            "completion_conditions": "change_theme()",
+            "unlock_conditions": "completed_action('intro-video') and not change_theme()",
+            "name": "Find your theme",
+            "priority": 3,
+            "description": "You may not have realized it, but it is possible to select a different \"skin\" for your personal Kukui Cup interface. The goal of this quest is for you to explore the different user interface themes and decide which one works best for you. To do it:\r\n\r\n1. Go to the Profile Page.\r\n2. In the \"My Info\" window, find the \"Theme\" pull-down menu. Select one of the other themes.\r\n3. Press \"Save Changes\" to enable your new theme.\r\n\r\nEnjoy your personalized Kukui Cup experience!",
+            "quest_slug": "find-your-theme"
+        },
+        "pk": 16
+    },
+    {
+        "model": "quests.quest",
+        "fields": {
+            "completion_conditions": "completed_action('check-participation')",
+            "unlock_conditions": "completed_action('intro-video') and not completed_action('check-participation')",
+            "name": "Check your lounge's participation",
+            "priority": 7,
+            "description": "You're playing the Kukui Cup hard, but how is the rest of your lounge doing? Are they playing the Cup? To win the lounge prizes, you need your dormies to start playing the game and reducing their energy use!\r\n\r\nIn the Smart Grid Game there is an activity to examine your lounge's participation rate in the **Just Do It** category. Find the activity and complete it to complete this quest.",
+            "quest_slug": "check-lounge-participation"
+        },
+        "pk": 17
+    },
+    {
+        "pk": 1,
+        "model": "djcelery.intervalschedule",
+        "fields": {
+            "every": 1,
+            "period": "hours"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "djcelery.crontabschedule",
+        "fields": {
+            "day_of_week": "*",
+            "hour": "23",
+            "minute": "55"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "djcelery.crontabschedule",
+        "fields": {
+            "day_of_week": "*",
+            "hour": "0",
+            "minute": "5"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "djcelery.crontabschedule",
+        "fields": {
+            "day_of_week": "*",
+            "hour": "15",
+            "minute": "0"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "djcelery.periodictask",
+        "fields": {
+            "task": "apps.widgets.resource_goal.tasks.check_energy_goal",
+            "name": "check_energy_goal",
+            "args": "[]",
+            "enabled": true,
+            "crontab": 1,
+            "interval": null,
+            "expires": null,
+            "kwargs": "{}",
+            "date_changed": "2012-06-30T14:18:46.151",
+            "description": ""
+        }
+    },
+    {
+        "pk": 2,
+        "model": "djcelery.periodictask",
+        "fields": {
+            "task": "apps.widgets.resource_goal.tasks.check_water_goal",
+            "name": "check_water_goal",
+            "args": "[]",
+            "enabled": true,
+            "crontab": 1,
+            "interval": null,
+            "expires": null,
+            "kwargs": "{}",
+            "date_changed": "2012-06-30T14:18:46.151",
+            "description": ""
+        }
+    },
+    {
+        "pk": 3,
+        "model": "djcelery.periodictask",
+        "fields": {
+            "task": "apps.managers.resource_mgr.tasks.update_energy_usage",
+            "name": "update_energy_usage",
+            "args": "[]",
+            "enabled": true,
+            "crontab": null,
+            "interval": 1,
+            "expires": null,
+            "kwargs": "{}",
+            "date_changed": "2012-06-30T14:18:46.151",
+            "description": ""
+        }
+    },
+    {
+        "pk": 4,
+        "model": "djcelery.periodictask",
+        "fields": {
+            "task": "apps.managers.resource_mgr.tasks.update_fake_water_usage",
+            "name": "update_fake_water_usage",
+            "args": "[]",
+            "enabled": true,
+            "crontab": 3,
+            "interval": null,
+            "expires": null,
+            "kwargs": "{}",
+            "date_changed": "2012-06-30T14:18:46.151",
+            "description": ""
+        }
+    },
+    {
+        "pk": 5,
+        "model": "djcelery.periodictask",
+        "fields": {
+            "task": "apps.widgets.smartgrid.tasks.process_notices",
+            "name": "process_notices",
+            "args": "[]",
+            "enabled": true,
+            "crontab": 2,
+            "interval": null,
+            "expires": null,
+            "kwargs": "{}",
+            "date_changed": "2012-06-30T14:18:46.151",
+            "description": ""
+        }
+    },
+    {
+        "pk": 6,
+        "model": "djcelery.periodictask",
+        "fields": {
+            "task": "apps.widgets.smartgrid.tasks.send_reminders",
+            "name": "send_reminders",
+            "args": "[]",
+            "enabled": true,
+            "crontab": null,
+            "interval": 1,
+            "expires": null,
+            "kwargs": "{}",
+            "date_changed": "2012-06-30T14:18:46.151",
+            "description": ""
+        }
+    },
+    {
+        "pk": 1,
+        "model": "score_mgr.scoresetting",
+        "fields": {
+            "feedback_bonus_points": 2,
+            "active_threshold_points": 50,
+            "quest_bonus_points": 0,
+            "setup_points": 5,
+            "signup_bonus_points": 2,
+            "noshow_penalty_points": 4
+        }
+    },
+    {
+        "pk": 1,
+        "model": "score_mgr.referralsetting",
+        "fields": {
+            "normal_referral_points": 10,
+            "super_referral_points": 20,
+            "mega_referral_points": 30,
+            "start_dynamic_bonus": false
+        }
+    },
+    {
+        "pk": 1,
+        "model": "resource_mgr.resourcesetting",
+        "fields": {
+            "winning_order": "Ascending",
+            "name": "energy",
+            "conversion_rate": 1000,
+            "unit": "kWh"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "resource_mgr.resourcesetting",
+        "fields": {
+            "winning_order": "Ascending",
+            "name": "water",
+            "unit": "gal"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "participation.participationsetting",
+        "fields": {
+            "points_50_percent": 5,
+            "points_75_percent": 5,
+            "points_100_percent": 10
+        }
+    },
+    {
+        "pk": 1,
+        "model": "challenge_mgr.challengesetting",
+        "fields": {
+            "use_internal_auth": true,
+            "email_enabled": false,
+            "landing_introduction": "## Aloha! Welcome to the Kukui Cup Demo Game.",
+            "wattdepot_server_url": "http://server.wattdepot.org:8194/wattdepot",
+            "cas_auth_text": "###I have a CAS email",
+            "ldap_search_base": "",
+            "theme": "theme-forest",
+            "use_cas_auth": false,
+            "email_host": "smtp.gmail.com",
+            "domain": "localhost",
+            "landing_slogan": "The Kukui Cup: <br/> Lights Off.  Game On!",
+            "internal_auth_text": "###Others",
+            "logo": "",
+            "contact_email": "kukuicup@hawaii.edu",
+            "use_ldap_auth": false,
+            "landing_non_participant_text": "###I stumbled onto this site somehow\r\n#####and want to know more about the Kukui Cup",
+            "name": "Kukui Cup",
+            "cas_server_url": "",
+            "email_use_tls": true,
+            "email_port": 587,
+            "ldap_auth_text": "###I have a LDAP email",
+            "ldap_server_url": "",
+            "landing_participant_text": "### I'm a participant\r\n##### Sign in using your registered username and password",
+            "team_label": "Team"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "challenge_mgr.aboutpage",
+        "fields": {
+            "challenge": 1,
+            "about_page_text": "<div style=\"float: right; width: 120px; margin-left: 10px; padding-top: 20px\">\r\n    <div style=\"margin-bottom: 10px\">\r\n        <a href=\"http://twitter.com/kukuicup\" class=\"twitter-follow-button\"\r\n           data-text-color=\"#FFFFFF\" data-show-count=\"false\">Follow @kukuicup</a>\r\n        <script src=\"http://platform.twitter.com/widgets.js\"\r\n                type=\"text/javascript\"></script>\r\n    </div>\r\n\r\n    <div>\r\n        <!-- Facebook Badge START --><a href=\"https://www.facebook.com/kukuicup\"\r\n                                        target=\"_TOP\" title=\"Kukui Cup\"><img\r\n            src=\"https://badge.facebook.com/badge/198203673552272.2024.1805538213.png\"\r\n            width=\"120\" height=\"186\" style=\"border: 0px;\"/></a><br/><!-- Facebook Badge END -->\r\n    </div>\r\n\r\n    <div style=\"margin-top: 5px\">\r\n        <g:plusone size=\"medium\"></g:plusone>\r\n\r\n        <script type=\"text/javascript\">\r\n            (function () {\r\n                var po = document.createElement(\"script\");\r\n                po.type = \"text/javascript\";\r\n                po.async = true;\r\n                po.src = \"https://apis.google.com/js/plusone.js\";\r\n                var s = document.getElementsByTagName('script')[0];\r\n                s.parentNode.insertBefore(po, s);\r\n            })();\r\n        </script>\r\n    </div>\r\n</div>  \r\n\r\n##What is the Kukui Cup?##\r\nThe Kukui Cup is an advanced energy challenge that combines real-time energy feedback, energy education, multiple forms of incentives, and gamification techniques to support positive changes in energy behavior. The inaugural Kukui Cup was held in Fall, 2011 for over 1,000 first year students living in the Hale Aloha residence halls at the University of Hawaii. We are planning the second Kukui Cup for Fall, 2012.  \r\n\r\n##Why is the Kukui Cup important to Hawaii?##\r\nOne of the great challenges facing Hawaii today is our dependence on foreign oil, which negatively affects our security, our economy, our environment, and our next generation's ability to have a healthy, prosperous, sustainable lifestyle. The Kukui Cup raises awareness about Hawaii's oil dependency and how to work toward a better energy future.  \r\n\r\nWe created the following three minute video to help explain why we believe energy issues are so important to Hawaii.    \r\n\r\n<center>\r\n<div class=\"video-container video-wrapper2 tabbed\">\r\n<iframe width=\"100%\" height=\"315\" style=\"max-width: 500px;\" src=\"http://www.youtube.com/embed/EJc0mXS7JCo\"\r\n                frameborder=\"0\" allowfullscreen></iframe>\r\n</div>\r\n</center>   \r\n\r\n##How it works##\r\nStudents participating in the Kukui Cup challenge can login to the website during the challenge to gain access about their current power consumption and cumulative energy use. The site also provides short videos developed specifically for the competition that provide insight into Hawaii energy issues, and students can earn points by correctly answering questions about each video's content. Other ways to earn points include meeting a daily energy conservation goal, attending short, interactive \"workshops\" about energy, or going on excursions to power plants, wind farms, and more. Participation can lead to prizes including t-shirts, pizza parties, and gift certificates. By playing the game, students become knowledgeable about the energy challenges facing Hawaii and how to change their own behavior and those around them to use energy more efficiently.  \r\n\r\nThe following two minute video was used in 2011 to introduce students to the Kukui Cup; it is one of the first things they watched after logging in to the website:  \r\n\r\n<center>\r\n<div class=\"video-container video-wrapper2\">\r\n<iframe width=\"100%\" height=\"315\" style=\"max-width: 500px;\" src=\"http://www.youtube.com/embed/T37kNTkZCrA\"\"\r\n                frameborder=\"0\" allowfullscreen></iframe>\r\n</div>\r\n</center>  \r\n\r\n##For more information##\r\nFor more information, please go to <a href=\"http://kukuicup.org\">kukuicup.org</a>.  \r\n  \r\n"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "challenge_mgr.sponsor",
+        "fields": {
+            "name": "Collaborative Software Development Laboratory",
+            "url": "http://csdl.ics.hawaii.edu",
+            "challenge": 1,
+            "priority": 1,
+            "logo": "media/challenge/logo.csdl.gif",
+            "logo_url": ""
+        }
+    },
+    {
+        "pk": 2,
+        "model": "challenge_mgr.sponsor",
+        "fields": {
+            "name": "National Science Foundation",
+            "url": "http://www.nsf.gov",
+            "challenge": 1,
+            "priority": 2,
+            "logo": "",
+            "logo_url": "http://www.nsf.gov/images/logos/nsf1sm.gif"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "prizes.prize",
+        "fields": {
+            "title": "Amazon Certificate",
+            "round": 1,
+            "image": "media/prizes/amazon.jpg",
+            "award_to": "individual_overall",
+            "value": 20,
+            "competition_type": "points",
+            "short_description": "$20 Amazon Gift Certificate for the individual with the highest number of points at the end of the Beta Test.",
+            "long_description": "Books, notebooks, magazines, art supplies, computers... you name it, Amazon's got it. With this gift certificate you'll be able to pick something up that you need (or maybe just want!).\r\n\r\nThis $20 gift certificate goes to the individual with the highest point total at the end of the Beta Test."
+        }
+    },
+    {
+        "pk": 4,
+        "model": "prizes.prize",
+        "fields": {
+            "title": "Bubbies Certificate",
+            "round": 1,
+            "image": "media/prizes/bubbies-logo.jpg",
+            "award_to": "team_overall",
+            "value": 5,
+            "competition_type": "points",
+            "short_description": "A $5 Bubbies Gift Certificate (gets you a single scoop cone) for each member of the team with the most points earned during the Beta Test.",
+            "long_description": "This gift certificate will score you one free ice cream cone from Bubbie's Ice Cream, just a short walk from the residence halls and one of the best ice cream parlors in Hawaii. \r\n\r\nTo win this $5 gift certificate, your team must earn more points than any other team during the Beta Test."
+        }
+    },
+    {
+        "pk": 2,
+        "model": "raffle.raffleprize",
+        "fields": {
+            "description": "Bid on this to rock your very own Jack Johnson t-shirt from his To The Sea Tour.  Size: L",
+            "title": "JJ tshirt (L)",
+            "round": 1,
+            "image": "media/prizes/jack-johnson-tshirt.jpg",
+            "winner": null,
+            "value": 20
+        }
+    },
+    {
+        "pk": 9,
+        "model": "raffle.raffleprize",
+        "fields": {
+            "description": "Bid on this to rock your very own Jack Johnson t-shirt from his To The Sea Tour.  Size: S",
+            "title": "JJ tshirt (S)",
+            "round": 1,
+            "image": "media/prizes/jack-johnson-tshirt.jpg",
+            "winner": null,
+            "value": 20
+        }
+    },
+    {
+        "pk": 10,
+        "model": "raffle.raffleprize",
+        "fields": {
+            "description": "Use this gift certificate to score your very own double dip cone at Bubbies Ice Cream Parlor, or else use it on a down payment for a larger purchase!",
+            "title": "Bubbies Cone",
+            "round": 1,
+            "image": "media/prizes/bubbies-storefront.jpg",
+            "winner": null,
+            "value": 5
+        }
+    },
+    {
+        "pk": 14,
+        "model": "raffle.raffleprize",
+        "fields": {
+            "description": "Want to keep learning about your energy consumption even after the Kukui Cup is over?  Bid on your very own Belkin Conserve Insight Energy Monitor!",
+            "title": "Energy Meter",
+            "round": 1,
+            "image": "media/prizes/belkin-energy-monitor.jpg",
+            "winner": null,
+            "value": 30
+        }
+    },
+    {
+        "pk": 25,
+        "model": "raffle.raffleprize",
+        "fields": {
+            "description": "What do beer cans, car tires and water bottles have in common? Not much unless you're renegade architect Michael Reynolds, in which case they are tools of choice for producing thermal mass and energy-independent housing. For 30 years New Mexico-based Reynolds and his green disciples have devoted their time to advancing the art of \"Earthship Biotecture\" by building self-sufficient, off-the-grid communities where design and function converge in eco-harmony. However, these experimental structures that defy state standards create conflict between Reynolds and the authorities, who are backed by big business. Frustrated by antiquated legislation, Reynolds lobbies for the right to create a sustainable living test site. While politicians hum and ha, Mother Nature strikes, leaving communities devastated by tsunamis and hurricanes. Reynolds and his crew seize the opportunity to lend their pioneering skills to those who need it most. Shot over three years and in four countries, Garbage Warrior is a timely portrait of a determined visionary, a hero of the 21st century.",
+            "title": "Garbage Warrior",
+            "round": 1,
+            "image": "media/prizes/garbage-warrior.png",
+            "winner": null,
+            "value": 20
+        }
+    },
+    {
         "pk": 1,
         "model": "smartgrid.level",
         "fields": {
@@ -4086,6 +6177,29 @@
             "event_max_seat": 1000,
             "event_location": "Online",
             "is_excursion": false
+        }
+    },
+    {
+        "pk":1,
+        "model":"team_mgr.group",
+        "fields":{
+            "name":"Lehua"
+        }
+    },
+    {
+        "pk":1,
+        "model":"team_mgr.team",
+        "fields":{
+            "group":1,
+            "name":"Lehua-A"
+        }
+    },
+    {
+        "pk":2,
+        "model":"team_mgr.team",
+        "fields":{
+            "group":1,
+            "name":"Lehua-B"
         }
     }
 ]
