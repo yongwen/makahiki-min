@@ -26,7 +26,7 @@ dj-database-url==0.2.1
 celery==2.5.5
 django-celery==2.5.5
 newrelic
-python-ldap==2.3.13
-django-auth-ldap==1.0.19
+#python-ldap==2.3.13
+#django-auth-ldap==1.0.19
 
 #django-debug-toolbar==0.9.4
