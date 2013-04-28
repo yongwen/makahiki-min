@@ -1,10 +1,8 @@
 """utility methods for makahiki scripts."""
-from django.contrib.auth.models import User
 
 import os
 import sys
 import getopt
-from apps.managers.challenge_mgr.models import ChallengeSetting
 
 
 def exit_with_help(msg):
@@ -61,31 +59,10 @@ def push_to_heroku(heroku_app):
     os.system("cd " + manage_py_dir() + "; git push %s master" % heroku_app)
 
 
-def init_db(force=False):
-    """syncdb and init data"""
-
-    try:
-        force = (1 == User.objects.count())
-    except:
-        force = True
-
-    if force:
-        manage_py = manage_py_command()
-
-        manage_command = "python " + manage_py
-        fixture_path = manage_py_dir() + "fixtures"
-        fixture = os.path.join(fixture_path, "all_default.json")
-
-        syncdb(manage_command)
-        os.system("%s loaddata -v 0 %s &" % (manage_command, fixture))
-        os.system("%s setup_test_data all 2 &" % manage_command)
-
-
 def syncdb(manage_command):
     """sync db."""
     print "syncing and migrating db..."
     cmd = "%s syncdb --noinput --migrate --verbosity 0" % manage_command
-    print cmd
     os.system(cmd)
 
 

@@ -9,6 +9,7 @@ from django.views.decorators.cache import never_cache
 from django.http import HttpResponseRedirect, HttpResponseForbidden, Http404, HttpResponse
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required, user_passes_test
+import os
 from apps.managers.cache_mgr import cache_mgr
 from apps.managers.challenge_mgr import challenge_mgr
 from apps.widgets.resource_goal import resource_goal
@@ -29,7 +30,7 @@ def init(request):
     """
     handle top level pages.
     """
-    script_utils.init_db(force=True)
+    os.system(script_utils.manage_py_dir() + "scripts/initialize_instance.py -t default -d &")
 
     return HttpResponse("init called")
 

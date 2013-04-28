@@ -3,6 +3,7 @@
 """
 Invocation:  scripts/initialize_instance .py -t|--type[=] default|demo|test
                                              -r|--heroku[=] <heroku_app>
+                                             -d|--data
 
 Use this script to create an instance with different types of configuration:
 
@@ -42,7 +43,7 @@ def main(argv):
     fixture_path = "fixtures"
 
     try:
-        opts, args = getopt.getopt(argv, "t:r:h", ["type=", "heroku=", "help"])
+        opts, args = getopt.getopt(argv, "t:r:h:d", ["type=", "heroku=", "help", "data"])
     except getopt.GetoptError:
         script_utils.exit_with_help(__doc__)
 
@@ -57,19 +58,22 @@ def main(argv):
         if opt[0] == "-r" or opt[0] == "--heroku":
             heroku_app = opt[1]
             manage_command = "heroku run --app %s python makahiki/manage.py" % heroku_app
+        if opt[0] == "-d" or opt[0] == "--data":
+            data_only = True
 
     if not instance_type in ("default", "demo", "test", "uh12"):
         script_utils.exit_with_help(__doc__)
 
     _ = args
 
-    if not heroku_app:
-        script_utils.install_requirements()
-    else:
-        script_utils.create_heroku_app(heroku_app)
-        script_utils.push_to_heroku(heroku_app)
+    if not data_only:
+        if not heroku_app:
+            script_utils.install_requirements()
+        else:
+            script_utils.create_heroku_app(heroku_app)
+            script_utils.push_to_heroku(heroku_app)
 
-    script_utils.reset_db(heroku_app)
+        script_utils.reset_db(heroku_app)
 
     script_utils.syncdb(manage_command)
 
@@ -77,6 +81,7 @@ def main(argv):
 
     script_utils.load_data(manage_command, instance_type, fixture_path)
 
+    print "initialize_instance completed."
 
 if __name__ == '__main__':
     main(sys.argv[1:])

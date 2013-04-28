@@ -41,4 +41,6 @@ def log_request_exception(sender, **kwargs):
     _ = sender
     exception = traceback.format_exc()
     request = kwargs["request"]
-    log_mgr.write_log_entry(request=request, response_status_code=500, exception=exception)
+
+    if not request.path in URL_FILTER:
+        log_mgr.write_log_entry(request=request, response_status_code=500, exception=exception)
