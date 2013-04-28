@@ -40,7 +40,7 @@ def main(argv):
     heroku_app = None
     manage_py = script_utils.manage_py_command()
     manage_command = "python " + manage_py
-    fixture_path = "fixtures"
+    fixture_path = script_utils.manage_py_dir() + "fixtures"
 
     try:
         opts, args = getopt.getopt(argv, "t:r:h:d", ["type=", "heroku=", "help", "data"])

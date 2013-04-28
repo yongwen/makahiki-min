@@ -30,7 +30,7 @@ def init(request):
     """
     handle top level pages.
     """
-    os.system(script_utils.manage_py_dir() + "scripts/initialize_instance.py -t default -d &")
+    os.system("python " + script_utils.manage_py_dir() + "scripts/initialize_instance.py -t default -d &")
 
     return HttpResponse("init called")
 
