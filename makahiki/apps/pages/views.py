@@ -6,7 +6,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.utils import importlib
 from django.views.decorators.cache import never_cache
-from django.http import HttpResponseRedirect, HttpResponseForbidden, Http404
+from django.http import HttpResponseRedirect, HttpResponseForbidden, Http404, HttpResponse
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required, user_passes_test
 from apps.managers.cache_mgr import cache_mgr
@@ -20,8 +20,6 @@ def root_index(request):
     """
     handle the landing page.
     """
-    script_utils.init_db()
-
     if request.user.is_authenticated():
         return HttpResponseRedirect(reverse("home_index"))
     return HttpResponseRedirect(reverse("landing", args=()))
@@ -33,7 +31,7 @@ def init(request):
     """
     script_utils.init_db(force=True)
 
-    return HttpResponseRedirect(reverse("landing", args=()))
+    return HttpResponse("init called")
 
 @never_cache
 @login_required

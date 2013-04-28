@@ -17,6 +17,7 @@ Sets up test data given the specified <command>.  Possible commands are:
 import datetime
 from django.contrib.auth.models import User
 import sys
+from django.core.management import BaseCommand
 
 from apps.managers.challenge_mgr.challenge_mgr import MakahikiBaseCommand
 from apps.managers.challenge_mgr.models import RoundSetting
@@ -27,7 +28,7 @@ from apps.widgets.resource_goal.models import EnergyGoalSetting, EnergyBaselineH
 from apps.widgets.smartgrid.models import Event, Commitment
 
 
-class Command(MakahikiBaseCommand):
+class Command(BaseCommand):
     """command"""
     help = "Setup the test data. Supported commands are : \n" \
            "  create_users <number_of_users for each team>\n" \

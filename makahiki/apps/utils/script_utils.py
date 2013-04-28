@@ -1,4 +1,5 @@
 """utility methods for makahiki scripts."""
+from django.contrib.auth.models import User
 
 import os
 import sys
@@ -64,7 +65,7 @@ def init_db(force=False):
     """syncdb and init data"""
 
     try:
-        ChallengeSetting.objects.get(pk=1)
+        force = (1 == User.objects.count())
     except:
         force = True
 
@@ -73,9 +74,11 @@ def init_db(force=False):
 
         manage_command = "python " + manage_py
         fixture_path = manage_py_dir() + "fixtures"
+        fixture = os.path.join(fixture_path, "all_default.json")
 
         syncdb(manage_command)
-        load_data(manage_command, "default", fixture_path)
+        os.system("%s loaddata -v 0 %s &" % (manage_command, fixture))
+        os.system("%s setup_test_data all 2 &" % manage_command)
 
 
 def syncdb(manage_command):
@@ -126,7 +129,6 @@ def create_heroku_app(heroku_app):
 
 def load_fixtures(manage_command, fixture_path, prefix):
     """load fixture files."""
-    print fixture_path
     for name in os.listdir(fixture_path):
         if name.startswith(prefix) and name.endswith(".json"):
             fixture = os.path.join(fixture_path, name)

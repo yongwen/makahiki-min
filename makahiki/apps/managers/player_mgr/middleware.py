@@ -27,7 +27,6 @@ class LoginMiddleware(object):
             return None
 
         # load the db settings if not done yet.
-        script_utils.init_db()
         challenge_mgr.init()
 
         # pass through for trivial requests
